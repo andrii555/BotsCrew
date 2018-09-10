@@ -1,0 +1,9 @@
+node_modules/
+.idea/
+build/
+.publish/
+app/css/vendor.min.css
+app/css/style.min.css
+app/css/style.min.css.map
+app/js/main.min.js
+app/js/vendor.min.js
