@@ -1,7 +1,80 @@
 header
+  //height: 100%
   .headimg
-    background: no-repeat center center
+    background: no-repeat center 65%
     background-size: cover
-    min-height: 628px
+    height: 628px
+    min-height: 228px
     position: relative
-    background-attachment: fixed
+    //background-attachment: fixed
+    &::after
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba(47, 128, 237, 0.5)
+      position: absolute
+    .container
+      position: relative
+      z-index: 999999
+      .title
+        color: $main-color
+        font-size: 21px
+        font-weight: 500
+        line-height: 26px
+        text-align: left
+        padding: 30px 0 0 0
+        font-family: $montserrat
+      .icon-fb-icon, .icon-tw-icon
+        color: $main-color
+        float: right
+        padding: 30px 0 0 20px
+        font-family: $montserrat
+
+      .main-title
+        color: $main-color
+        padding: 135px 0 0 15px
+        letter-spacing: 3.8px
+
+        h1
+          font-size: 44px
+          font-family: $OpenSans-regular
+        p
+          font-family: $OpenSans-light
+          font-size: 44px
+      button
+        padding: 24px
+        font-size: 18px
+        color: $button-color
+        line-height: 25px
+        letter-spacing: 4px
+        width: 282px
+        border-radius: 50px
+        background-color: $main-color
+        margin-top: 42px
+        font-family: $OpenSans-regular
+
+section.second
+  .center-title
+    margin-top: 5%
+  .center h2
+    color: $text-color
+  .center-content
+    margin: 5% 0
+  .center-content img
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+
+  .center-block
+    padding: 0
+
+
+
+
+
+
+
