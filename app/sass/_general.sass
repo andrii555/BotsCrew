@@ -58,23 +58,255 @@ header
         font-family: $OpenSans-regular
 
 section.second
-  .center-title
-    margin-top: 5%
-  .center h2
-    color: $text-color
-  .center-content
-    margin: 5% 0
-  .center-content img
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
+  .header-text
+    padding: 80px 0 35px 0
+    line-height: 66px
+    font-size: 44px
+    letter-spacing: 0.016em
+    font-family: $OpenSans-regular
+    h2
+      font-size: 44px
+      //color: $mainHeadColor
+    p
+      font-family: $OpenSans-light
+  .container-category
+    .ctg
+      float: left
+      width: 33.33333%
+      padding: 15px
+      position: relative
+      .category-main
+        position: relative
+        .contain-img
+          overflow: hidden
+          padding: 0
+          position: relative
+          display: inline-block
+          vertical-align: top
+          height: 150px
+          width: 150px
+          border-radius: 20px
+          .imgbg
+            background: no-repeat center center
+            background-size: cover
+            position: relative
+            height: 100%
+            transform: scale3d(1, 1, 1)
+            transition: all 0.5s linear
+          &::after
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(23, 23, 23, .6)
+            opacity: 0
 
-  .center-block
-    padding: 0
+        .bottom-text
+            padding: 20px 0
+            font-family: $OpenSans-regular
+            h5
+              margin-top: 0
+              font-size: 20px
+              text-overflow: ellipsis
+              white-space: nowrap
+              overflow: hidden
+            p
+              margin: 0
+              text-overflow: ellipsis
+              white-space: nowrap
+              overflow: hidden
+              font-family: $OpenSans-light
+
+      .category-main:hover
+        .contain-img
+          .imgbg
+            transform: scale3d(1.2, 1.2, 1)
+          &::after
+            opacity: 1
+section.main
+  background: linear-gradient(122.77deg, #2F80ED 0%, #17345C 98.9%)
+  background-size: cover
+  font-size: 12px
+  line-height: 1.3
+  overflow: hidden
+  .main-title
+    float: left
+    width: 66.33333%
+    padding: 15px
+    position: relative
+    .header-text
+      padding: 80px 0 35px 0
+      //line-height: 66px
+      font-size: 44px
+      letter-spacing: 0.016em
+      font-family: $OpenSans-regular
+      color: $main-color
+      h2
+        font-size: 44px
+         //color: $mainHeadColor
+      h3
+        font-size: 44px
+        font-family: $OpenSans-light
+
+      p
+        padding-top: 20px
+        font-size: 27px
+        font-family: $OpenSans-light
+    button
+      padding: 24px
+      font-size: 18px
+      color: $button-color
+      line-height: 25px
+      letter-spacing: 4px
+      width: 282px
+      border-radius: 50px
+      background-color: $main-color
+      margin-top: 42px
+      font-family: $OpenSans-regular
+
+
+  .chating
+    float: left
+    width: 33.33333%
+    padding: 73px 15px
+    position: relative
+
+    .js-chat__tab-list
+      list-style: none
+      padding: 0
+      margin: 0
+      margin-top: 30px
+      display: flex
+      justify-content: space-between
+
+    .js-chat__tab-item
+      position: relative
+      font-family: $OpenSans-regular
+      font-size: 14px
+      line-height: 1.5
+      color: #fff
+      padding-top: 55px
+      z-index: 2
+      opacity: .5
+      cursor: pointer
+
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 50%
+        width: 50px
+        height: 50px
+        background: url(../images/chat/shopping.png) no-repeat center $main-color
+        background-size: 30px
+        z-index: 1
+        transition: .3s ease
+
+      &:nth-child(2)::before
+        background: url(../images/chat/night-life.png) no-repeat center $main-color
+        background-size: 30px
+
+
+      &:nth-last-child(1)::before
+        background: url(../images/chat/food.png) no-repeat center $main-color
+        background-size: 30px
+
+
+      &--active
+        opacity: 1
+
+
+      &:hover::before
+        transform: translateX(-50%) scale(1.125)
+        box-shadow: 0 0 5px rgba(255, 255, 255, .3)
+footer
+  background: linear-gradient(122.77deg, #2F80ED 0%, #17345C 98.9%)
+  .container
+    .footer__wrap
+      padding-top: 30px
+      padding-bottom: 40px
+      border-top: 1px solid rgba(255, 255, 255, 0.2)
+      display: flex
+      flex-wrap: wrap
 
 
 
+    .footer__sidebar
+      display: flex
+      justify-content: space-between
+      align-items: center
+      order: 1
+      width: 100%
+      margin-top: 50px
+
+
+    .footer__sidebar-logo
+      font-family:  $OpenSans-regular, sans-serif
+      font-size: 14px
+      line-height: 1.2
+      color: #fff
+      text-transform: lowercase
+      text-decoration: none
+
+
+    .footer__sidebar-copyright
+      font-family: $OpenSans-light
+      font-size: 16px
+      line-height: 1.5
+      color: rgba(255, 255, 255, 0.7)
+      text-decoration: none
 
 
 
+    .footer__content
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      width: 100%
 
+
+    .footer-social,
+    .footer-nav
+      width: 47%
+      text-align: left
+
+
+
+    .footer-social__title,
+    .footer-nav__title
+      font-family: $OpenSans-regular
+      font-size: 16px
+      color: #fff
+
+
+    .footer-social__list,
+    .footer-nav__list
+      list-style: none
+      padding: 0
+      margin: 0
+
+
+    .footer-social__item,
+    .footer-nav__item
+      margin-top: 17px
+
+
+    .footer-social__link,
+    .footer-nav__link
+      font-family: $OpenSans-light
+      font-size: 14px
+      line-height: 1.5
+      color: rgba(255, 255, 255, 0.7)
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+
+
+    .footer-nav
+      text-align: right
