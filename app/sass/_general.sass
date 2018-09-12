@@ -28,6 +28,8 @@ header
         text-align: left
         padding: 30px 0 0 0
         font-family: $montserrat
+        display: block
+        text-decoration: none
       .icon-fb-icon, .icon-tw-icon
         color: $main-color
         float: right
@@ -173,7 +175,7 @@ section.main
     padding: 73px 15px
     position: relative
 
-    .js-chat__tab-list
+    .js-chat-tab-list
       list-style: none
       padding: 0
       margin: 0
@@ -181,7 +183,7 @@ section.main
       display: flex
       justify-content: space-between
 
-    .js-chat__tab-item
+    .js-chat-tab-item
       position: relative
       font-family: $OpenSans-regular
       font-size: 14px
@@ -223,49 +225,49 @@ section.main
       &:hover::before
         transform: translateX(-50%) scale(1.125)
         box-shadow: 0 0 5px rgba(255, 255, 255, .3)
-footer
-  background: linear-gradient(122.77deg, #2F80ED 0%, #17345C 98.9%)
-  .container
-    .footer__wrap
+
+  footer
+    .footer-wrap
+      padding: 0 20px;
       padding-top: 30px
       padding-bottom: 40px
       border-top: 1px solid rgba(255, 255, 255, 0.2)
       display: flex
       flex-wrap: wrap
 
+    .footer-sidebar
+      display: flex;
+      //justify-content: space-between
+      //align-items: center
+      //order: 1
+      width: 50%
+      //margin-top: 50px
+      //flex-direction: row
 
-
-    .footer__sidebar
-      display: flex
-      justify-content: space-between
-      align-items: center
-      order: 1
-      width: 100%
-      margin-top: 50px
-
-
-    .footer__sidebar-logo
-      font-family:  $OpenSans-regular, sans-serif
-      font-size: 14px
+    .footer-sidebar-logo
+      font-family: $montserrat
+      font-size: 21px
       line-height: 1.2
       color: #fff
       text-transform: lowercase
       text-decoration: none
 
-
-    .footer__sidebar-copyright
+    .footer-sidebar-copyright
       font-family: $OpenSans-light
       font-size: 16px
       line-height: 1.5
       color: rgba(255, 255, 255, 0.7)
       text-decoration: none
+      align-self: flex-end
+      position: absolute
 
-
-    .footer__content
+    .footer-content
       display: flex
       flex-wrap: wrap
-      justify-content: space-between
-      width: 100%
+      //justify-content: space-between
+      justify-content: flex-end
+      width: 50%
+      align-items: flex-end
 
 
     .footer-social,
@@ -273,29 +275,24 @@ footer
       width: 47%
       text-align: left
 
-
-
-    .footer-social__title,
-    .footer-nav__title
+    .footer-social-title,
+    .footer-nav-title
       font-family: $OpenSans-regular
       font-size: 16px
       color: #fff
 
-
-    .footer-social__list,
-    .footer-nav__list
+    .footer-social-list,
+    .footer-nav-list
       list-style: none
       padding: 0
       margin: 0
 
-
-    .footer-social__item,
-    .footer-nav__item
+    .footer-social-item,
+    .footer-nav-item
       margin-top: 17px
 
-
-    .footer-social__link,
-    .footer-nav__link
+    .footer-social-link,
+    .footer-nav-link
       font-family: $OpenSans-light
       font-size: 14px
       line-height: 1.5
@@ -305,7 +302,6 @@ footer
       &:hover
         text-decoration: underline
 
-
-
     .footer-nav
       text-align: right
+

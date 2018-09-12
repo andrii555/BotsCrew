@@ -52,7 +52,7 @@ $(window).on('keydown', function(e) {
 
 var Fake = [
     'Hi there, I\'m Fabio and you?',
-    '<img  src="images/Rectangle.png" />',
+    '<img  src="images/Rectangle.png" style="width: 232px" />',
     'Nice to meet you',
     'How are you?',
     'Not too bad, thanks',
@@ -85,3 +85,41 @@ function fakeMessage() {
     }, 1000 + (Math.random() * 20) * 100);
 
 }
+(function() {
+
+    "use strict";
+
+    // all tabs
+    var tabs = document.querySelectorAll(".js-chat-tab-item");
+    var sectionMessages = document.querySelectorAll(".js-chat-messages");
+
+    for (var i=0; i<tabs.length; i++) {
+        tabs[i].addEventListener("click", showMessageBlock);
+    }
+
+
+
+    function showMessageBlock(event) {
+        event = event || window.event;
+
+        for (var i=0; i<tabs.length; i++) {
+            tabs[i].classList.remove("js-chat-tab-item--active");
+        }
+
+        this.classList.add("js-chat-tab-item--active");
+
+        var numTab = this.getAttribute("data-tab-chat");
+
+        for (var i=0; i<sectionMessages.length; i++) {
+            sectionMessages[i].classList.remove("js-chat-messages--active");
+
+            if (numTab == i) {
+                sectionMessages[i].classList.add("js-chat-messages--active");
+            }
+        }
+
+    }
+
+
+
+})();
