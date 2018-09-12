@@ -1,6 +1,5 @@
 node_modules/
 .idea/
-build/
 .publish/
 app/css/vendor.min.css
 app/css/style.min.css
